@@ -13,6 +13,7 @@ async function getData(slug: string) {
   const url = `https://api-gateway.pharmacity.vn/pmc-ecm-app-config/api/config/with-code/v1.0.2?keys[]=${slug}`;
   try {
     const response = await fetch(url, { next: { tags: [slug] } });
+    console.log(response)
     if (!response.ok) {
       throw new Error(`Response status: ${response.status}`);
     }
@@ -20,6 +21,7 @@ async function getData(slug: string) {
     const json = await response.json();
     return json;
   } catch (_) {
+    console.log(_)
     return;
   }
 }
