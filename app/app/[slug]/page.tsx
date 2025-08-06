@@ -50,7 +50,7 @@ function generateRandomString(length: number) {
 function generateItemsPromise(slug?:string) {
   return new Promise((resolve, reject) => {
       const items = [];
-      const numberOfItems = 10000;
+      const numberOfItems = 100;
 
       for (let i = 0; i < numberOfItems; i++) {
           const item = {
