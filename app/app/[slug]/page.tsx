@@ -79,13 +79,13 @@ async function processGeneratedItems(slug: string): Promise<any[]> {
       // Giá trị được 'resolve' sẽ được gán vào biến 'items'.
       const items:any = await generateItemsPromise(slug);
 
-      console.log(`Đã tạo thành công ${items.length} item.`);
-      console.log("5 item đầu tiên:", items.slice(0, 5));
-      console.log("Item thứ 100:", items[99]);
+      // console.log(`Đã tạo thành công ${items.length} item.`);
+      // console.log("5 item đầu tiên:", items.slice(0, 5));
+      // console.log("Item thứ 100:", items[99]);
 
-      // Bạn có thể thực hiện các thao tác khác với 'items' ở đây
-      // Ví dụ: gửi lên API, lưu vào database, v.v.
-      console.log("Hoàn thành xử lý các item.");
+      // // Bạn có thể thực hiện các thao tác khác với 'items' ở đây
+      // // Ví dụ: gửi lên API, lưu vào database, v.v.
+      // console.log("Hoàn thành xử lý các item.");
       return items;
 
   } catch (error) {
@@ -98,11 +98,12 @@ async function processGeneratedItems(slug: string): Promise<any[]> {
 export default async function Page({ params }: ProductDetailProps) {
   const resData = await processGeneratedItems(params.slug);
   const cookieStore = cookies();
-  console.log('1111', cookieStore.getAll().length)
-  cookieStore.getAll().map((cookie) => console.log(cookie.name))
+ 
+
 
   return (
     <div>
+      { cookieStore.getAll().map((cookie) => <div>{cookie.name + '=' + cookie.value}</div>)}
       {resData?.map(item => <div>{item?.name}</div>)}
     </div>
   );
