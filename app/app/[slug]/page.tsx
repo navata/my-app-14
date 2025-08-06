@@ -77,7 +77,7 @@ async function processGeneratedItems(slug: string): Promise<any[]> {
   try {
       // 'await' sẽ tạm dừng việc thực thi hàm này cho đến khi Promise được giải quyết (resolve).
       // Giá trị được 'resolve' sẽ được gán vào biến 'items'.
-      const items = await generateItemsPromise(slug);
+      const items:any = await generateItemsPromise(slug);
 
       console.log(`Đã tạo thành công ${items.length} item.`);
       console.log("5 item đầu tiên:", items.slice(0, 5));
