@@ -97,9 +97,6 @@ async function processGeneratedItems(slug: string): Promise<any[]> {
 
 export default async function Page({ params }: ProductDetailProps) {
   const resData = await processGeneratedItems(params.slug);
-  const cookieStore = cookies();
-  console.log('1111', cookieStore.getAll().length)
-  cookieStore.getAll().map((cookie) => console.log(cookie.name))
 
   return (
     <div>
