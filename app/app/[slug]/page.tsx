@@ -103,6 +103,7 @@ export default async function Page({ params }: ProductDetailProps) {
 
   return (
     <div>
+      {1111111111111}
       { cookieStore.getAll().map((cookie) => <div>{cookie.name + '=' + cookie.value}</div>)}
       {resData?.map(item => <div>{item?.name}</div>)}
     </div>
