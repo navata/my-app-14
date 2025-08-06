@@ -15,14 +15,14 @@ async function getData(slug: string) {
     const response = await fetch(url, { next: { revalidate: 0, tags: [slug] } });
     console.log(response)
     if (!response.ok) {
-      return;
+      return 'ERROR';
     }
 
     const json = await response.json();
     return json;
   } catch (_) {
     console.log(_)
-    return;
+    return 'ERROR';
   }
 }
 
