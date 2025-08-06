@@ -1,4 +1,4 @@
-export const dynamic = 'force-static';
+
 // export const revalidate = 300;
 
 import type { Metadata } from "next";

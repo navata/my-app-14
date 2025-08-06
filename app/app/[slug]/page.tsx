@@ -1,5 +1,4 @@
 // export const revalidate = 20;
-export const dynamic = 'force-static';
 
 import React from 'react';
 import { cookies } from 'next/headers'
