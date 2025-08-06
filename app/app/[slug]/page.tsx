@@ -12,7 +12,7 @@ type ProductDetailProps = {
 async function getData(slug: string) {
   const url = `https://api.nationalize.io/?name=${slug}`;
   try {
-    const response = await fetch(url, { next: { tags: [slug] } });
+    const response = await fetch(url, { next: { revalidate: 0, tags: [slug] } });
     console.log(response)
     if (!response.ok) {
       throw new Error(`Response status: ${response.status}`);
