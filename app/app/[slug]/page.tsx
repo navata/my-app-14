@@ -10,7 +10,7 @@ type ProductDetailProps = {
 };
 
 async function getData(slug: string) {
-  const url = `https://api-gateway.pharmacity.vn/pmc-ecm-app-config/api/config/with-code/v1.0.2?keys[]=${slug}`;
+  const url = `https://api.nationalize.io/?name=${slug}`;
   try {
     const response = await fetch(url, { next: { tags: [slug] } });
     console.log(response)
