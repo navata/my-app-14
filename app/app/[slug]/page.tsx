@@ -1,4 +1,5 @@
 // export const revalidate = 20;
+// export const dynamic = 'force-static';
 
 import React from 'react';
 import { cookies } from 'next/headers'
@@ -14,7 +15,7 @@ async function getData(slug: string) {
     const response = await fetch(url, { next: { revalidate: 0, tags: [slug] } });
     console.log(response)
     if (!response.ok) {
-      throw new Error(`Response status: ${response.status}`);
+      return;
     }
 
     const json = await response.json();
