@@ -2,7 +2,7 @@
 // export const dynamic = 'force-static';
 
 import React from 'react';
-import { cookies } from 'next/headers'
+// import { cookies } from 'next/headers'
 
 type ProductDetailProps = {
   params: { slug: string };
@@ -97,14 +97,14 @@ async function processGeneratedItems(slug: string): Promise<any[]> {
 
 export default async function Page({ params }: ProductDetailProps) {
   const resData = await processGeneratedItems(params.slug);
-  const cookieStore = cookies();
+  // const cookieStore = cookies();
  
 
 
   return (
     <div>
       {1111111111111}
-      { cookieStore.getAll().map((cookie) => <div>{cookie.name + '=' + cookie.value}</div>)}
+      {/* { cookieStore.getAll().map((cookie) => <div>{cookie.name + '=' + cookie.value}</div>)} */}
       {resData?.map(item => <div>{item?.name}</div>)}
     </div>
   );
