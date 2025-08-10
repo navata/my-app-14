@@ -1,6 +1,7 @@
 // export const revalidate = 20;
 // export const dynamic = 'force-static';
 
+import { redirect } from 'next/navigation';
 import React from 'react';
 // import { cookies } from 'next/headers'
 
@@ -98,6 +99,14 @@ async function processGeneratedItems(slug: string): Promise<any[]> {
 export default async function Page({ params }: ProductDetailProps) {
   const resData = await processGeneratedItems(params.slug);
   // const cookieStore = cookies();
+
+  if(params?.slug == '1') {
+    redirect('/')
+  }
+
+  if(params?.slug == '2') {
+    redirect('/app/3')
+  }
  
 
 
