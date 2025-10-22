@@ -6,7 +6,7 @@
         "appID": "4MXTKML533.com.pharmacity.react-extracare",
         "components": [
           {
-            "/": "/login/sso/*"
+            "/": "/*"
           }
         ]
       }
