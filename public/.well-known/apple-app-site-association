@@ -8,10 +8,13 @@
         ],
         "components": [
           {
-            "/": "/login/sso"
+            "/": "/r/vneidapp*"
           },
           {
-            "/": "/login/sso/*"
+            "/": "/r/vneidapp?*"
+          },
+          {
+            "/": "/r/vneidapp/?*"
           }
         ]
       }
