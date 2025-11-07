@@ -8,7 +8,8 @@
     "test:playwright": "playwright test",
     "test:jest": "jest",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "start-pm2": "pm2 start npm --name 'NextApp-Production' -- start"
   },
   "dependencies": {
     "clsx": "^2.1.1",
