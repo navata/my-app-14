@@ -1,9 +1,11 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import {MetadataRoute} from 'next';
 import {host} from '@/config';
 import {Locale, getPathname, routing} from '@/i18n/routing';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [...getEntries('/'), ...getEntries('/pathnames')];
+  // return [...getEntries('/'), ...getEntries('/pathnames')];
+  return [];
 }
 
 type Href = Parameters<typeof getPathname>[0]['href'];
