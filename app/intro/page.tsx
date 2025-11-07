@@ -1,7 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export default function IntroPage() {
-  return (
-    <div>IntroPage</div>
-  )
+  return <div>IntroPage + {new Date().getTime()}</div>;
 }

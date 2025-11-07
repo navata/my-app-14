@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <div>
           <div className="w-full p-4 bg-gray-100">
-            <Link href="/">Home</Link>
+            <Link href="/">Home + {new Date().getTime()}</Link>
           </div>
           <div className="p-4">{children}</div>
         </div>
