@@ -30,7 +30,7 @@ export default async function middleware(request: NextRequest) {
 
   const response = handleI18nRouting(request);
   // response.headers.set('Cache-Control', 'public, max-age=20');
-  response.headers.set('Cache-Control', 'public, max-age=120, stale-while-revalidate=7200');
+  response.headers.set('Cache-Control', 'public, max-age=120, stale-while-revalidate=86400');
 
   return response;
 }
