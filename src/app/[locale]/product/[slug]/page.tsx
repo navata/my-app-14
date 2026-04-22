@@ -1,27 +1,26 @@
 import React from 'react';
 
 type Props = {
-  params: {locale: string; slug: string};
+  params: { locale: string; slug: string };
 };
 
 // eslint-disable-next-line func-style
-const getData = async (): Promise<number> => {
-  // eslint-disable-next-line func-style
-  const myPromise = new Promise<number>((resolve) =>
+const getData = (slug: string): Promise<string> => {
+  const myPromise = new Promise<string>((resolve) =>
     setTimeout(() => {
-      resolve(new Date().getTime());
-    }, 1000)
+      resolve(`${slug}-${new Date().getTime()}`);
+    }, 10000)
   );
 
-  return await myPromise;
+  return myPromise;
 };
 
-export default async function ProductDetail({params: {slug}}: Props) {
-  const time = await getData();
+export default async function ProductDetail({ params: { slug } }: Props) {
+  const timeSlugString = await getData(slug);
 
   return (
     <div className="container p-6">
-      {slug} + {time}
+      {timeSlugString}
     </div>
   );
 }
