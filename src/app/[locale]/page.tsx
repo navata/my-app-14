@@ -1,41 +1,42 @@
-import {Link} from '@/i18n/routing';
-import {useTranslations} from 'next-intl';
-import {setRequestLocale} from 'next-intl/server';
+// import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
+import { Link } from "@/i18n/routing";
+
 // import PageLayout from '@/components/PageLayout';
 
 type Props = {
-  params: {locale: string};
+	params: { locale: string };
 };
 
-export default function IndexPage({params: {locale}}: Props) {
-  // Enable static rendering
-  setRequestLocale(locale);
+export default function IndexPage({ params: { locale } }: Props) {
+	// Enable static rendering
+	setRequestLocale(locale);
 
-  const t = useTranslations('IndexPage');
+	// const t = useTranslations("IndexPage");
 
-  return (
-    <div className="container flex flex-col gap-4 p-6">
-      <Link href="/product/a" prefetch={false}>
-        SP A
-      </Link>
-      <Link href="/product/b" prefetch={false}>
-        SP B
-      </Link>
-      <Link href="/product/c" prefetch={false}>
-        SP C
-      </Link>
-    </div>
-  );
+	return (
+		<div className="container flex flex-col gap-4 p-6">
+			<Link href="/product/a" prefetch={false}>
+				SP A
+			</Link>
+			<Link href="/product/b" prefetch={false}>
+				SP B
+			</Link>
+			<Link href="/product/c" prefetch={false}>
+				SP C
+			</Link>
+		</div>
+	);
 
-  // return (
-  //   <PageLayout title={t('title')}>
-  //     <p className="max-w-[590px]">
-  //       {t.rich('description', {
-  //         code: (chunks) => (
-  //           <code className="font-mono text-white">{chunks}</code>
-  //         )
-  //       })}
-  //     </p>
-  //   </PageLayout>
-  // );
+	// return (
+	//   <PageLayout title={t('title')}>
+	//     <p className="max-w-[590px]">
+	//       {t.rich('description', {
+	//         code: (chunks) => (
+	//           <code className="font-mono text-white">{chunks}</code>
+	//         )
+	//       })}
+	//     </p>
+	//   </PageLayout>
+	// );
 }

@@ -1,0 +1,71 @@
+{
+	"editor.tabSize": 2,
+	"editor.defaultFormatter": "biomejs.biome",
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		"source.organizeImports.biome": "explicit",
+		"source.fixAll.biome": "explicit"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[javascriptreact]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[css]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"cSpell.words": [
+		"ahamove",
+		"ALEPAY",
+		"alepaytqt",
+		"coloyalty",
+		"combokit",
+		"combokits",
+		"consts",
+		"COPD",
+		"crios",
+		"cslw",
+		"deeplink",
+		"ECOMMERCE",
+		"Extracare",
+		"extracares",
+		"FACKBOOK",
+		"fxios",
+		"grecaptcha",
+		"mimages",
+		"MMOL",
+		"MSIG",
+		"Newfriend",
+		"Pharmacity",
+		"presign",
+		"qqbrowser",
+		"recaptcha",
+		"referal",
+		"samsungbrowser",
+		"Santen",
+		"skus",
+		"Swiper",
+		"TCGINS",
+		"Techcombank",
+		"ucbrowser",
+		"Vaul",
+		"vietmap",
+		"VNEID",
+		"vneidapp",
+		"xsmall",
+		"ZALO"
+	]
+}

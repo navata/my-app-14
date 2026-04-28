@@ -1,22 +1,22 @@
-import {createNavigation} from 'next-intl/navigation';
-import {defineRouting} from 'next-intl/routing';
+import { createNavigation } from "next-intl/navigation";
+import { defineRouting } from "next-intl/routing";
 
 export const routing = defineRouting({
-  locales: ['en', 'de'],
-  defaultLocale: 'en',
-  // pathnames: {
-  //   '/': '/'
-  //   '/pathnames': {
-  //     en: '/pathnames',
-  //     de: '/pfadnamen'
-  //   }
-  // },
-  localePrefix: 'as-needed',
-  localeDetection: false
+	locales: ["en", "de"],
+	defaultLocale: "en",
+	// pathnames: {
+	//   '/': '/'
+	//   '/pathnames': {
+	//     en: '/pathnames',
+	//     de: '/pfadnamen'
+	//   }
+	// },
+	localePrefix: "as-needed",
+	localeDetection: false,
 });
-export type Pathnames = any;
+export type Pathnames = unknown;
 // export type Pathnames = keyof typeof routing.pathnames;
 export type Locale = (typeof routing.locales)[number];
 
-export const {Link, getPathname, redirect, usePathname, useRouter} =
-  createNavigation(routing);
+export const { Link, getPathname, redirect, usePathname, useRouter } =
+	createNavigation(routing);
